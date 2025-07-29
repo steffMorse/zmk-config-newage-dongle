@@ -1,19 +1,25 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_NEWAGE_LEFT
+if SHIELD_NEWAGE_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Newage"
+    default "Newage Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_USB
+    default y
+
 endif
 
-if SHIELD_NEWAGE_LEFT || SHIELD_NEWAGE_RIGHT
+if SHIELD_NEWAGE_LEFT || SHIELD_NEWAGE_RIGHT || SHIELD_NEWAGE_DONGLE
 
 config ZMK_SPLIT
+    default y
+
+config ZMK_BLE
     default y
 
 if ZMK_DISPLAY
