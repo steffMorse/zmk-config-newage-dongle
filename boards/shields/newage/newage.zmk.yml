@@ -13,3 +13,4 @@ features:
 siblings:
   - newAge_left
   - newAge_right
+  - newAge_dongle
