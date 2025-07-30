@@ -12,7 +12,16 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_USB
     default y
 
-endif
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+endif # SHIELD_NEWAGE_DONGLE
 
 if SHIELD_NEWAGE_LEFT || SHIELD_NEWAGE_RIGHT || SHIELD_NEWAGE_DONGLE
 
@@ -55,4 +64,4 @@ config WS2812_STRIP
     default y
 endif
 
-endif
+endif # SHIELD_NEWAGE_LEFT || SHIELD_NEWAGE_RIGHT || SHIELD_NEWAGE_DONGLE
